@@ -32,7 +32,7 @@ android {
                         def outputFile = output.outputFile
                         if (outputFile != null && outputFile.name.endsWith('.apk')) {
                             def fileName = "${releaseTime()}_com.andli.myproject_${defaultConfig.versionName}.apk"
-                            output.outputFile = new File("/Users/zhouxiaoyan/Downloads/APK", fileName)
+                            outputFileName = new File("/Users/zhouxiaoyan/Downloads/APK", fileName)
                         }
                     }
                 }
