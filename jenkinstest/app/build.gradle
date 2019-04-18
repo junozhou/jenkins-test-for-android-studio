@@ -28,7 +28,7 @@ android {
             signingConfig signingConfigs.release//打包命令行：gradlew assembleRelease
             applicationVariants.all { variant ->
                 if (variant.buildType.name.equals('release')) {
-                    variant.outputs.each { output ->
+                    variant.outputs.all { output ->
                         def outputFile = output.outputFile
                         if (outputFile != null && outputFile.name.endsWith('.apk')) {
                             def fileName = "${releaseTime()}_com.andli.myproject_${defaultConfig.versionName}.apk"
